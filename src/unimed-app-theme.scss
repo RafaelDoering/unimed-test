@@ -10,7 +10,7 @@
 $unimed-blue: (
     50: #ffffff,
     100: #dde6f3,
-    200: #b4c9e4,
+    200: #FCCC68,
     300: #7fa3d1,
     400: #6992c9,
     500: #5282c1,
@@ -36,7 +36,7 @@ $unimed-blue: (
         A100: $black-87-opacity,
         A200: $black-87-opacity,
         A400: $black-87-opacity,
-        A700: white,
+        A700: #FCCC68,
     )
 );
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -47,7 +47,7 @@ $accent:  mat-palette($mat-grey, 50);
 $background-color: map_get($unimed-blue, 700);
 
 // The warn palette is optional (defaults to red).
-$warn:    mat-palette($mat-red, 900);
+$warn:    mat-palette($unimed-blue, 200);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-light-theme($primary, $accent, $warn);

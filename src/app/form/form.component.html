@@ -1,10 +1,10 @@
-<mat-progress-bar mode="determinate" [value]="value" style="height: 4px; position: fixed; z-index: 1020;"></mat-progress-bar>
-<form [formGroup]="portalForm" class="container d-flex form-text" style="min-height: calc(100vh - 74px);">
-  <div class="align-self-end" style="padding-bottom: calc(50vh - 74px); padding-top: calc(43vh - 74px)">
+<mat-progress-bar mode="determinate" [value]="value" style="height: 5px; position: fixed; z-index: 1020;border-bottom: 2px solid #263A5D;"></mat-progress-bar>
+<form [formGroup]="portalForm" class="container d-flex form-text" style="min-height: calc(100vh - 75px);">
+  <div class="align-self-end" style="padding-bottom: calc(50vh - 75px); padding-top: calc(43vh - 75px)">
     <div class="px-1" #scrollFirst (click)="scrollToElement(0)">
       <div class="transtion-s on-hover" [ngClass]="{ 'out-focus': isBlur[0], 'in-focus': !isBlur[0] }">
         <span matPrefix class="pr-2">Qual o seu nome?</span>
-        <mat-form-field style="width: 500px;" >
+        <mat-form-field>
           <input matInput type="text" formControlName="first" (blur)="onBlur(0)" (focus)="onFocus(0)" (keyup)="onKey($event , 0)">
         </mat-form-field>
       </div>
@@ -13,10 +13,7 @@
       <div class="transtion-s on-hover" [ngClass]="{ 'out-focus': isBlur[1], 'in-focus': !isBlur[1] }">
         <span matPrefix class="pr-2">E sua data de nascimento?</span>
         <mat-form-field>
-          <input matInput formControlName="second" (blur)="onBlur(1)"
-            (focus)="onFocus(1)" (keyup)="onKey($event, 1)">
-          <!-- <mat-datepicker-toggle matSuffix [for]="picker" style="opacity: 0;"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker> -->
+          <input matInput formControlName="second" (blur)="onBlur(1)" (focus)="onFocus(1)" (keyup)="onKey($event, 1)">
         </mat-form-field>
       </div>
     </div>
@@ -45,7 +42,7 @@
     </div>
     <div class="px-1" *ngIf="isDone[3] === true">
       <div class="transtion-s">
-        <button mat-flat-button class="button-text py-1" (click)="firstBtn()" routerLink="/perfil">Próximo</button>
+        <button mat-flat-button class="button-text py-1" (click)="firstBtn()" color="warn">Próximo</button>
       </div>
     </div>
   </div>
