@@ -337,9 +337,9 @@ MIT
 
 @angular/material/radio
 
-@angular/material/progress-bar
-
 @angular/material/checkbox
+
+@angular/material/progress-bar
 
 @angular/material/dialog
 
